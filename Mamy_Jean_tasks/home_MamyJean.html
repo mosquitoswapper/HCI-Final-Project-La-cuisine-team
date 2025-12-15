@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Home page</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="">
+                <h1>La cuisine</h1>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="navbar">
+                <a href="./home_MamyJean.html">Home</a>
+                <a href="#about">About</a>
+                <a id="favoriteNav" href="../Dea_tasks/dea_favorite.html"><i class="fa-solid fa-heart"></i> Favorite</a>
+                <a href="./settings.html"><i class="fa-solid fa-circle-user"></i> Profile</a>
+            </div>
+        </nav>
+        <div class="nav-element">
+            <h1>Find the best local meals near you</h1>
+        </div>
+    </header>
+
+    <!-- overlay pour le nav mobile -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+
+        <section id="recommended">
+            <h1>Recommended for you</h1>
+
+            <div class="recommended-grid" id="recommendedList"></div>
+
+            <div class="explore">
+                <a href="./restaurant_Mamyjean.html">
+                    Explore more →
+                </a>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about-title">
+                <h1>About Us</h1>
+            </div>
+            <div class="about-element">
+                <div class="image">
+                    <img src="../images/about-img.png" alt="">
+                </div>
+                <div class="content">
+                    <h2>Who We Are</h2>
+                    <p>LaCusine is a restaurant web app that helps you discover delicious nearby food in just a few
+                        taps. Whether you are craving local favorites or international cuisine, we make it easy to find
+                        restaurants that match your taste, budget, and lifestyle all with clear labels and real
+                        ratings.</p>
+                </div>
+            </div>
+            <div class="about-element about-element1">
+                <div class="image">
+                    <img src="../images/about-img.png" alt="">
+                </div>
+                <div class="content">
+                    <h2>Our Mission</h2>
+                    <p>We believe choosing where to eat should be quick and joyful. That is why LaCusine brings you
+                        smart recommendations, honest reviews, and clear labeling from “Halal” and “Vegetarian” to
+                        distance and popularity so you can enjoy great food without the guesswork.</p>
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="service-title">
+                <h1>Our Services</h1>
+            </div>
+
+            <div class="services-content">
+                <div class="items">
+                    <h3>Discover Nearby Foods</h3>
+                    <p>Find the best restaurant near your location</p>
+                </div>
+                <div class="items">
+                    <h3>Halal & Dietary Filters</h3>
+                    <p>Filter your search by Halal, Non-Halal, Vegan, or Vegetarian </p>
+                </div>
+                <div class="items">
+                    <h3>Trusted Reviews & Ratings</h3>
+                    <p>Read real user reviews before you choose</p>
+                </div>
+                <div class="items">
+                    <h3>Multilingual Interface</h3>
+                    <p>Available in English and Bahasa Indonesie</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-element">
+                <h1>La Cuisine</h1>
+                <p>Fresh and halal meals made easy</p>
+            </div>
+            <div class="footer-element">
+                <div class="link">
+                    <a href="./home_MamyJean.html">Home</a>
+                    <a href="#about">About</a>
+                    <a id="favoriteFooter" href="../Dea_tasks/dea_favorite.html">Favorite</a>
+                    <a href="./settings.html">Profile</a>
+                </div>
+            </div>
+            <div class="footer-element">
+                <p class="follow">Follow Us</p>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-youtube"></i>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="copyright">
+            <p>&copy; 2025 LaCuisine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="humberger_Mamyjean.js"></script>
+    <script src="restaurant_data.js"></script>
+    <script src="home_recomended.js"></script>
+</body>
+
+</html>

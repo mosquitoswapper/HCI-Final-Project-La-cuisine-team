@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* --- SECTION RESTAURANT --- */
+#restaurant {
+    background: #EABD4D;
+    padding: 90px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.search-restaurant {
+    display: flex;
+    height: 160px;
+    padding: 0 73px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #FFF;
+    background: rgba(98, 87, 71, 0.39);
+    gap: 15px;
+}
+
+.search-restaurant h1 {
+    color: #FFF;
+    text-align: center;
+    text-shadow: -30px 21px 21.8px rgba(0, 0, 0, 0.23);
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.search-restaurant .input-restaurant {
+    display: flex;
+    align-items: center;
+}
+
+.search-restaurant .input-restaurant input {
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #000;
+    background: #FFF;
+    width: 695px;
+    height: 63px;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.search-restaurant .input-restaurant input::placeholder {
+    color: #424242;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.search-restaurant .input-restaurant button {
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #000;
+    background: #FFF;
+    width: 180px;
+    height: 63px;
+    padding: 6px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+#restaurantList {
+    padding-top: 40px;
+}
+
+
+.restaurant-element {
+    width: 70%;
+    max-width: 900px;
+    background: #FFF;
+    margin: 40px auto;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+}
+
+
+.restaurant-element .image {
+    width: 260px;
+    height: 253px;
+    background: #FFF;
+}
+
+.restaurant-element .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+
+.restaurant-element .content {
+    flex: 1;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.restaurant-element .content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.rating span {
+    font-weight: 600;
+}
+
+.rating .stars i {
+    color: #FFC107;
+    margin-right: 2px;
+}
+
+.rating .score {
+    font-weight: 600;
+}
+
+
+.restaurant-element .adress {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* BUTTONS */
+.restaurant-element .btn {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+}
+
+.restaurant-element .btn button {
+    background: #000;
+    color: #FFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.restaurant-element .btn button:hover {
+    background: #333;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    #restaurant {
+        padding: 0 0;
+    }
+
+
+    .search-restaurant {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .search-restaurant h1 {
+        font-size: 32px;
+    }
+
+    .search-restaurant .input-restaurant {
+        width: 100%;
+    }
+
+    .search-restaurant .input-restaurant input {
+        width: 100%;
+    }
+
+    .restaurant-element {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .restaurant-element .image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .restaurant-element .image img {
+        border-radius: 12px 12px 0 0;
+    }
+}

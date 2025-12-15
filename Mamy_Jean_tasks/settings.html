@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings_style.css"/>
+    <link rel="stylesheet" href="../Mamy_Jean_tasks/style.css">
+    <link rel="stylesheet" href="../Mamy_Jean_tasks/header_responsive.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- La Cuisine Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- header -->
+
+<header class="header">
+    <nav>
+        <div class="logo">
+            <img src="../images/logo.png" alt="">
+            <h1>La cuisine</h1>
+        </div>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="navbar">
+            <a href="./home_MamyJean.html">Home</a>
+            <a href="./home_MamyJean.html#about">About</a>
+            <a href="../Dea_tasks/dea_favorite.html"><i class="fa-solid fa-heart"></i> Favorite</a>
+            <a href="./settings.html"><i class="fa-solid fa-circle-user"></i> Profile</a>
+        </div>
+    </nav>
+</header>
+
+<!-- overlay pour le nav mobile -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- settings -->
+
+<main class="setting">
+    <div class="setting-float-panel"> 
+        <aside class="sidebar"> <!-- side panel -->
+            <ul>
+                <li class="current" data-panel="general">General</li>
+                <li data-panel="general">Edit Profile</li>
+                <li data-panel="security">Security</li>
+                <li data-panel="privacy">Privacy</li>
+                <li class="logout-button" id="logoutButton">Log Out</li>
+            </ul>
+        </aside>
+
+        <!-- settings card -->
+        <section class="content">
+
+            <!-- general card -->
+            <div class="content-panel active" id="panel-general">
+                <div class="profile-area">
+                    <div class="setting-pfp-avatar">
+                        <img id="profileAvatar" src="../images/Default_pfp.svg.png" alt="Profile picture">
+                    </div>
+                    <div>
+                        <h2 id="profileNameHeading">User Name</h2>
+                        <button type="button" class="change-photo">Change Photo</button>
+                    </div>
+                </div>
+                
+                <form class="input-forms" id="profileForm">
+                    <div class="input-info">
+                        <div class="name-input">
+                            <label for="profileFullName">Name</label>
+                            <input type="text" id="profileFullName" placeholder="Name">
+                        </div>
+            
+                        <div class="email-input">
+                            <label for="profileEmail">Email</label>
+                            <input type="email" id="profileEmail" placeholder="example@gmail.com">
+                        </div>
+
+                        <div class="language-input">
+                            <label>Language</label>
+                            <div class="language-options">
+                                <button type="button" class="active-language" data-lang="en">
+                                    <img src="../images/circle-flag-of-usa-free-png.png" alt="English(US)">
+                                </button>
+                                <button type="button" class="language" data-lang="id">
+                                    <img src="../images/197559.png" alt="Indonesian">
+                                </button>
+                                <button type="button" class="language" data-lang="jp">
+                                    <img src="../images/circle-flag-of-japan-free-png.webp" alt="Japanese">
+                                </button>
+                                <button type="button" class="language" data-lang="cn">
+                                    <img src="../images/china-flat-rounded-flag-with-transparent-background-free-png.png" alt="Mandarin">
+                                </button>
+                                <button type="button" class="language" data-lang="in">
+                                    <img src="../images/circle-flag-of-india-free-png.webp" alt="Hindi">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="general-forms">
+                        <button type="submit" class="save-button" id="saveProfileButton">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- PANEL SECURITY -->
+            <div class="content-panel" id="panel-security">
+                <section class="security-section">
+                    <h2>Security</h2>
+                    <p class="security-subtitle">
+                        Manage your password and account safety.
+                    </p>
+
+                    <form class="security-form" id="securityForm">
+                        <div class="field-group">
+                            <label for="currentPassword">Current password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="currentPassword" placeholder="Enter current password">
+                                <i class="fa-solid fa-eye toggle-eye" id="toggleCurrentPassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="newPassword">New password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="newPassword" placeholder="Enter new password">
+                                <i class="fa-solid fa-eye toggle-eye" id="toggleNewPassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="confirmPassword">Confirm new password</label>
+                            <input type="password" id="confirmPassword" placeholder="Repeat new password">
+                        </div>
+
+                        <button type="submit" class="save-button security-save">
+                            Update Password
+                        </button>
+                    </form>
+
+                    <div class="security-actions">
+
+
+                        <div class="security-block danger-zone">
+                            <h3>Delete account</h3>
+                            <p>This will permanently remove your profile and data from this browser.</p>
+                            <button type="button" class="danger-button" id="deleteAccountButton">
+                                Delete my account
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- PANEL PRIVACY (placeholder) -->
+            <div class="content-panel" id="panel-privacy">
+    <h2>Privacy</h2>
+    <p class="privacy-subtitle">Manage your data and privacy preferences.</p>
+
+    <div class="privacy-block">
+        <h3>Data Storage</h3>
+        <p>Your profile data is stored locally on this device using localStorage. 
+        No data is sent to any server.</p>
+    </div>
+
+    <div class="privacy-block">
+        <h3>Clear Application Data</h3>
+        <p>This will remove all saved profiles, settings, and sessions.</p>
+        <button class="danger-button" id="clearDataButton">Clear all data</button>
+    </div>
+</div>
+
+
+        </section>
+    </div>
+</main>
+
+<!-- footer -->
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-element">
+            <h1>La Cuisine</h1>
+            <p>Fresh and halal meals made easy</p>
+        </div>
+        <div class="footer-element">
+            <div class="link">
+                <a href="./home_MamyJean.html">Home</a>
+                <a href="./home_MamyJean.html#about">About</a>
+                <a href="../Dea_tasks/dea_favorite.html">Favorite</a>
+                <a href="./settings.html">Profile</a>
+            </div>
+        </div>
+        <div class="footer-element">
+            <p class="follow">Follow Us</p>
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <div class="copyright">
+        <p>&copy; 2025 LaCuisine. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- scripts -->
+<script src="settings_Mamyjean.js"></script>
+<script src="humberger_Mamyjean.js"></script>
+</body>
+</html>

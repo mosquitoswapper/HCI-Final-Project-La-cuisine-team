@@ -1,0 +1,506 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #020d16;
+}
+
+/* body */
+
+.setting {
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/copy.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.setting-float-panel {
+    width: 938px;
+    height: 608px;
+    background-color: #ffffff;
+    border-radius: 36px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid #000000;
+    padding: 24px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 14px 32px;
+    font-size: 15px;
+    color: #111111;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    text-decoration: underline;
+}
+
+.sidebar li.current {
+    font-weight: 600;
+}
+
+.logout-button {
+    border-top: 1px solid #000000;
+    margin-top: 32px;
+    color: #c53a2f;
+}
+
+.content {
+    padding: 32px 40px 40px;
+}
+
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.setting-pfp-avatar img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+.profile-area h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.change-photo {
+    border: none;
+    background: none;
+    color: #6e6d79;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.input-forms {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 20px;
+    flex: 1;
+}
+
+.email-input,
+.language-input {
+    grid-column: 1 / -1;
+}
+
+.input-info label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.input-info input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.language-options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-options button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.language-options button img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.general-forms {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.save-button {
+    padding: 11px 26px;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    background-color: #ad312a;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+footer {
+    background:
+        url("./images/footer.png") 50% / cover no-repeat;
+    height: 312px;
+}
+
+.footer-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25em;
+
+}
+
+.footer-element {
+
+    height: 129px;
+    color: #FFF;
+
+}
+
+.footer-element .link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-element .link a {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    color: #FFF;
+    padding: 5px 0;
+
+}
+
+.footer-element h1 {
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-element .icon {
+    margin-top: 10px;
+}
+
+.footer-element .icon i {
+    font-size: 22px;
+}
+
+.footer-element .follow {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Poppins sans-serif;
+}
+
+.hr {
+    border-bottom: 2px solid #FFF;
+    margin-top: -50px;
+    width: 100%;
+}
+
+.copyright {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.content-panel {
+    display: none;
+}
+
+.content-panel.active {
+    display: block;
+}
+
+/* Security styles */
+.security-section {
+    margin-top: 32px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.security-subtitle {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #555;
+}
+
+.security-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #000;
+}
+
+.field-group input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+}
+
+.password-wrapper .toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.password-wrapper .toggle-eye:hover {
+    color: #000;
+}
+
+.security-save {
+    margin-top: 8px;
+}
+
+.security-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.security-block h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.security-block p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.secondary-button {
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid #999;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.danger-zone {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.danger-button {
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: #c53a2f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.privacy-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.privacy-block {
+    margin-bottom: 24px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: not-allowed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 22px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+/* responsive */
+/* tablet */
+@media (max-width: 1024px) {
+
+
+    .setting {
+        padding: 32px 16px 48px;
+        background-size: cover;
+    }
+
+    .setting-float-panel {
+        width: 100%;
+        max-width: 938px;
+        height: auto;
+    }
+
+    .content {
+        padding: 24px 24px 32px;
+    }
+
+    .input-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 16px;
+    }
+
+    .profile-area h2 {
+        font-size: 18px;
+    }
+}
+/* mobile */
+
+@media (max-width: 600px) {
+    .setting {
+        padding: 24px 12px 40px;
+        background-size: contain;
+        padding-top: 120px;
+    }
+
+    .setting-float-panel {
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #000;
+        padding: 16px 0;
+    }
+
+    .sidebar ul li a{
+        color: #000000;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .logout-button {
+        margin-top: 16px;
+    }
+
+    .content {
+        padding: 20px 16px 24px;
+    }
+
+    .profile-area {
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .setting-pfp-avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-area h2 {
+        font-size: 18px;
+    }
+
+    .change-photo {
+        font-size: 12px;
+    }
+
+    .input-info {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .input-info label {
+        font-size: 14px;
+    }
+
+    .input-info input {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .language-options {
+        flex-wrap: wrap;
+    }
+
+    .language-options button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .general-forms {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+
+}
